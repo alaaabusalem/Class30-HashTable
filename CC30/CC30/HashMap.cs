@@ -28,7 +28,9 @@ namespace CC30
 
 			for (int i = 0; i < letters.Length; i++)
 			{
-				hashValue += letters[i]; /// Integer representation
+				//hashValue += letters[i]; /// Integer representation
+				hashValue += letters[i] * (i + 1); // Multiply each character by its position
+
 			}
 
 			//0 - 9
@@ -158,5 +160,7 @@ namespace CC30
 
 
 		}
+		
+
 	}
 }
