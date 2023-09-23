@@ -6,7 +6,7 @@
 ![alt text](RepeatedWord1.jpg)
 ![alt text](RepeatedWord2.jpg)
 
-# Class 32 Repeated-word
+# Class 33 Left-Join
 ![alt text](CC331.jpg)
 ![alt text](CC332.jpg)
 
