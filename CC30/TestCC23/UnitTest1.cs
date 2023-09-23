@@ -1,5 +1,6 @@
 using CC30;
 using Microsoft.VisualStudio.TestPlatform.TestHost;
+using System.Collections;
 
 namespace TestCC23
 {
@@ -21,7 +22,7 @@ namespace TestCC23
 			hashMap.Set("Yaman", "Physics");
 			hashMap.Set("Said", "CS");
 			Assert.Equal("Civil Engineer", hashMap.Get("Ahmad"));
-			Assert.Equal("the key Kady is Not exist", hashMap.Get("Kady"));
+			Assert.Equal("Null", hashMap.Get("Kady"));
 			Assert.Equal(true, hashMap.Has("Osama"));
 			Assert.Equal(false, hashMap.Has("Kady"));
 			Assert.Equal(10, hashMap.Keys().Count);
@@ -44,5 +45,35 @@ namespace TestCC23
 
 
 		}
-	}
+
+		//CC33
+        [Fact]
+
+        public void testLeftJoin()
+        {
+
+            HashMap synonyms = new HashMap(5);
+            synonyms.Set("diligent", "employed");
+            synonyms.Set("fond", "enamored");
+            synonyms.Set("guide", "usher");
+            synonyms.Set("outfit", "garb");
+            synonyms.Set("wrath", "anger");
+
+            HashMap antonyms = new HashMap(5);
+            antonyms.Set("diligent", "idle");
+            antonyms.Set("fond", "averse");
+            antonyms.Set("guide", "follow");
+            antonyms.Set("flow", "jam");
+            antonyms.Set("wrath", "delight");
+            Hashtable leftJoin = CC30.Program.LeftJoni(synonyms, antonyms);
+			string[] array = (string[])leftJoin["diligent"];
+            Assert.Equal("diligent", array[0]);
+            Assert.Equal("employed", array[1]);
+            Assert.Equal("idle", array[2]);
+
+
+
+
+        }
+    }
 }
