@@ -108,7 +108,7 @@ namespace CC30
 
 				}
 			}
-			return $"the key {key} is Not exist";
+			return "Null";
 
 		}
 		public bool Has(string key)
@@ -160,7 +160,11 @@ namespace CC30
 
 
 		}
-		
+		 public int GetSize()
+		{
+
+			return Map.Length;
+		}
 
 	}
 }
